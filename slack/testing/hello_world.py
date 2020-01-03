@@ -1,6 +1,8 @@
 # testing script
 import requests
 import sys
+sys.path.append('~/keys')
+from keys import Keychain
 
 class Tester:
 
@@ -14,6 +16,7 @@ class Tester:
 
 if __name__ == '__main__':
     
-    bot_testing_webhook = sys.argv[1]
+    kc = Keychain()
+    bot_testing_webhook = kc.get('bot_testing_webhook')
     t1 = Tester()
     t1.post(bot_testing_webhook)
