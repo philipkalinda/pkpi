@@ -1,7 +1,7 @@
 # testing script
 import requests
 import sys
-sys.path.append('~/keys')
+sys.path.append('../../../keys')
 from keys import Keychain
 
 class Tester:
